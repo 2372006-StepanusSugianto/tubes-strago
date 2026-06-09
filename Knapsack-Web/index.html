@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapsack 0/1 - Pemilihan Barang Tas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <header>
+            <h1>Pemilihan Barang Bawaan Tas</h1>
+            <p>Knapsack 0/1 Menggunakan Algoritma Backtracking</p>
+        </header>
+
+        <main>
+            <section class="card glass">
+                <h2>1. Kapasitas Tas</h2>
+                <div class="input-group">
+                    <label for="capacity">Kapasitas Maksimal (gram)</label>
+                    <input type="number" id="capacity" min="1" placeholder="Contoh: 5000">
+                </div>
+            </section>
+
+            <section class="card glass">
+                <h2>2. Daftar Barang</h2>
+                <div class="table-responsive">
+                    <table id="itemsTable">
+                        <thead>
+                            <tr>
+                                <th>Nama Barang</th>
+                                <th>Berat (gram)</th>
+                                <th>Nilai Manfaat</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itemsBody">
+                            <!-- Items will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <button id="addItemBtn" class="btn btn-secondary">+ Tambah Barang</button>
+            </section>
+
+            <div class="action-section">
+                <button id="solveBtn" class="btn btn-primary">Hitung Solusi Optimal</button>
+            </div>
+
+            <section id="resultSection" class="card glass hidden">
+                <h2>3. Hasil Analisis</h2>
+                
+                <div class="result-grid">
+                    <div class="result-box">
+                        <h3>Barang Terpilih</h3>
+                        <ul id="selectedItemsList"></ul>
+                    </div>
+                    
+                    <div class="result-box stats-box">
+                        <h3>Statistik</h3>
+                        <p>Total Berat: <span id="resWeight" class="highlight">0</span> gram</p>
+                        <p>Total Nilai: <span id="resValue" class="highlight">0</span></p>
+                        <p>Sisa Kapasitas: <span id="resRemaining" class="highlight">0</span> gram</p>
+                        <p>Jumlah Node: <span id="resNodes" class="highlight">0</span></p>
+                        <p>Waktu Eksekusi: <span id="resTime" class="highlight">0</span> ms</p>
+                    </div>
+                </div>
+
+                <div class="exploration-box">
+                    <h3>Langkah Eksplorasi Backtracking (20 Pertama)</h3>
+                    <div class="code-block" id="explorationSteps"></div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 - Strategi Algoritmik | Tema Mewah & Elegan</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
